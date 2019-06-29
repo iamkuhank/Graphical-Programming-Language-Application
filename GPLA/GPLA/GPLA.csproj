@@ -101,6 +101,12 @@
     <Content Include="Designer\Images\SaveFolderpng.png" />
     <Content Include="Designer\Images\unavailabeTexturepng.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccessClassLibrary\AccessClassLibrary.csproj">
+      <Project>{8463f1cb-1c15-41a8-b711-837ecd56700a}</Project>
+      <Name>AccessClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

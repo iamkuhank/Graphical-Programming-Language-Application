@@ -39,6 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassCircle.cs" />
+    <Compile Include="ClassLine.cs" />
+    <Compile Include="ClassPentagon.cs" />
+    <Compile Include="ClassRectangle.cs" />
+    <Compile Include="ClassShape.cs" />
+    <Compile Include="ClassShapeFactory.cs" />
+    <Compile Include="ClassTriangle.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -73,18 +73,23 @@
          this.tabControl1 = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
          this.tabPage2 = new System.Windows.Forms.TabPage();
-         this.btnClear = new System.Windows.Forms.Button();
-         this.button1 = new System.Windows.Forms.Button();
-         this.button2 = new System.Windows.Forms.Button();
+         this.btnConsoleClear = new System.Windows.Forms.Button();
+         this.btnConsoleSave = new System.Windows.Forms.Button();
+         this.btnConsoleRun = new System.Windows.Forms.Button();
          this.rtxtErrors = new System.Windows.Forms.RichTextBox();
          this.tabPage3 = new System.Windows.Forms.TabPage();
          this.tabPage4 = new System.Windows.Forms.TabPage();
-         this.btnExit = new GPLA.Designer.CircularButton();
          this.rtxtHistory = new System.Windows.Forms.RichTextBox();
          this.rtxtTexture = new System.Windows.Forms.RichTextBox();
          this.rtxt3D = new System.Windows.Forms.RichTextBox();
          this.btnRhombus = new System.Windows.Forms.Button();
          this.btnPentagon = new System.Windows.Forms.Button();
+         this.btnExit = new GPLA.Designer.CircularButton();
+         this.Texture1 = new System.Windows.Forms.PictureBox();
+         this.Texture2 = new System.Windows.Forms.PictureBox();
+         this.Texture3 = new System.Windows.Forms.PictureBox();
+         this.Texture4 = new System.Windows.Forms.PictureBox();
+         this.Texture5 = new System.Windows.Forms.PictureBox();
          this.panel1.SuspendLayout();
          this.panel2.SuspendLayout();
          this.panel3.SuspendLayout();
@@ -102,6 +107,11 @@
          this.tabPage2.SuspendLayout();
          this.tabPage3.SuspendLayout();
          this.tabPage4.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture1)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture2)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture3)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture4)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture5)).BeginInit();
          this.SuspendLayout();
          // 
          // panel1
@@ -159,6 +169,7 @@
          this.btnNew.Size = new System.Drawing.Size(75, 68);
          this.btnNew.TabIndex = 0;
          this.btnNew.UseVisualStyleBackColor = false;
+         this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
          this.btnNew.MouseLeave += new System.EventHandler(this.btnNew_MouseLeave);
          this.btnNew.MouseHover += new System.EventHandler(this.btnNew_MouseHover);
          // 
@@ -174,6 +185,7 @@
          this.btnOpen.Size = new System.Drawing.Size(75, 68);
          this.btnOpen.TabIndex = 0;
          this.btnOpen.UseVisualStyleBackColor = false;
+         this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
          this.btnOpen.MouseLeave += new System.EventHandler(this.btnOpen_MouseLeave);
          this.btnOpen.MouseHover += new System.EventHandler(this.button1_MouseHover);
          // 
@@ -189,14 +201,15 @@
          this.btnSave.Size = new System.Drawing.Size(75, 68);
          this.btnSave.TabIndex = 0;
          this.btnSave.UseVisualStyleBackColor = false;
+         this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
          this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
          this.btnSave.MouseHover += new System.EventHandler(this.btnSave_MouseHover);
          // 
          // panel4
          // 
-         this.panel4.Controls.Add(this.button2);
-         this.panel4.Controls.Add(this.button1);
-         this.panel4.Controls.Add(this.btnClear);
+         this.panel4.Controls.Add(this.btnConsoleRun);
+         this.panel4.Controls.Add(this.btnConsoleSave);
+         this.panel4.Controls.Add(this.btnConsoleClear);
          this.panel4.Controls.Add(this.tabControl1);
          this.panel4.Controls.Add(this.rtxtConsole);
          this.panel4.Location = new System.Drawing.Point(873, 119);
@@ -459,6 +472,7 @@
          this.btnCircle.Size = new System.Drawing.Size(28, 28);
          this.btnCircle.TabIndex = 0;
          this.btnCircle.UseVisualStyleBackColor = false;
+         this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
          this.btnCircle.MouseLeave += new System.EventHandler(this.btnCircle_MouseLeave);
          this.btnCircle.MouseHover += new System.EventHandler(this.btnCircle_MouseHover);
          // 
@@ -474,6 +488,7 @@
          this.btnSquare.Size = new System.Drawing.Size(28, 28);
          this.btnSquare.TabIndex = 0;
          this.btnSquare.UseVisualStyleBackColor = false;
+         this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
          this.btnSquare.MouseLeave += new System.EventHandler(this.btnSquare_MouseLeave);
          this.btnSquare.MouseHover += new System.EventHandler(this.btnSquare_MouseHover);
          // 
@@ -489,6 +504,7 @@
          this.btnRectangle.Size = new System.Drawing.Size(28, 28);
          this.btnRectangle.TabIndex = 0;
          this.btnRectangle.UseVisualStyleBackColor = false;
+         this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
          this.btnRectangle.MouseLeave += new System.EventHandler(this.btnRectangle_MouseLeave);
          this.btnRectangle.MouseHover += new System.EventHandler(this.btnRectangle_MouseHover);
          // 
@@ -504,6 +520,7 @@
          this.btnTriangle.Size = new System.Drawing.Size(28, 28);
          this.btnTriangle.TabIndex = 0;
          this.btnTriangle.UseVisualStyleBackColor = false;
+         this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
          this.btnTriangle.MouseLeave += new System.EventHandler(this.btnTriangle_MouseLeave);
          this.btnTriangle.MouseHover += new System.EventHandler(this.btnTriangle_MouseHover);
          // 
@@ -519,6 +536,7 @@
          this.btnPen.Size = new System.Drawing.Size(28, 28);
          this.btnPen.TabIndex = 0;
          this.btnPen.UseVisualStyleBackColor = false;
+         this.btnPen.Click += new System.EventHandler(this.btnPen_Click);
          // 
          // label11
          // 
@@ -562,6 +580,11 @@
          this.DrawAreaPanel.Size = new System.Drawing.Size(775, 578);
          this.DrawAreaPanel.TabIndex = 0;
          this.DrawAreaPanel.TabStop = false;
+         this.DrawAreaPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawAreaPanel_MouseClick);
+         this.DrawAreaPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawAreaPanel_MouseDown);
+         this.DrawAreaPanel.MouseLeave += new System.EventHandler(this.DrawAreaPanel_MouseLeave);
+         this.DrawAreaPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawAreaPanel_MouseMove);
+         this.DrawAreaPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawAreaPanel_MouseUp);
          // 
          // showColorbox
          // 
@@ -571,6 +594,7 @@
          this.showColorbox.Size = new System.Drawing.Size(28, 28);
          this.showColorbox.TabIndex = 0;
          this.showColorbox.TabStop = false;
+         this.showColorbox.Click += new System.EventHandler(this.showColorbox_Click);
          // 
          // showTexturebox
          // 
@@ -590,6 +614,7 @@
          this.rtxtConsole.Size = new System.Drawing.Size(304, 231);
          this.rtxtConsole.TabIndex = 1;
          this.rtxtConsole.Text = "";
+         this.rtxtConsole.TextChanged += new System.EventHandler(this.rtxtConsole_TextChanged);
          // 
          // tabControl1
          // 
@@ -627,38 +652,41 @@
          this.tabPage2.TabIndex = 1;
          this.tabPage2.Text = "History";
          // 
-         // btnClear
+         // btnConsoleClear
          // 
-         this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-         this.btnClear.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.btnClear.Location = new System.Drawing.Point(13, 258);
-         this.btnClear.Name = "btnClear";
-         this.btnClear.Size = new System.Drawing.Size(75, 23);
-         this.btnClear.TabIndex = 2;
-         this.btnClear.Text = "Clear";
-         this.btnClear.UseVisualStyleBackColor = true;
+         this.btnConsoleClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+         this.btnConsoleClear.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnConsoleClear.Location = new System.Drawing.Point(13, 258);
+         this.btnConsoleClear.Name = "btnConsoleClear";
+         this.btnConsoleClear.Size = new System.Drawing.Size(75, 23);
+         this.btnConsoleClear.TabIndex = 2;
+         this.btnConsoleClear.Text = "Clear";
+         this.btnConsoleClear.UseVisualStyleBackColor = true;
+         this.btnConsoleClear.Click += new System.EventHandler(this.btnConsoleClear_Click);
          // 
-         // button1
+         // btnConsoleSave
          // 
-         this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-         this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button1.Location = new System.Drawing.Point(112, 258);
-         this.button1.Name = "button1";
-         this.button1.Size = new System.Drawing.Size(75, 23);
-         this.button1.TabIndex = 2;
-         this.button1.Text = "Save";
-         this.button1.UseVisualStyleBackColor = true;
+         this.btnConsoleSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
+         this.btnConsoleSave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnConsoleSave.Location = new System.Drawing.Point(112, 258);
+         this.btnConsoleSave.Name = "btnConsoleSave";
+         this.btnConsoleSave.Size = new System.Drawing.Size(75, 23);
+         this.btnConsoleSave.TabIndex = 2;
+         this.btnConsoleSave.Text = "Save";
+         this.btnConsoleSave.UseVisualStyleBackColor = true;
+         this.btnConsoleSave.Click += new System.EventHandler(this.btnConsoleSave_Click);
          // 
-         // button2
+         // btnConsoleRun
          // 
-         this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-         this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button2.Location = new System.Drawing.Point(218, 258);
-         this.button2.Name = "button2";
-         this.button2.Size = new System.Drawing.Size(75, 23);
-         this.button2.TabIndex = 2;
-         this.button2.Text = "Run";
-         this.button2.UseVisualStyleBackColor = true;
+         this.btnConsoleRun.FlatStyle = System.Windows.Forms.FlatStyle.System;
+         this.btnConsoleRun.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnConsoleRun.Location = new System.Drawing.Point(218, 258);
+         this.btnConsoleRun.Name = "btnConsoleRun";
+         this.btnConsoleRun.Size = new System.Drawing.Size(75, 23);
+         this.btnConsoleRun.TabIndex = 2;
+         this.btnConsoleRun.Text = "Run";
+         this.btnConsoleRun.UseVisualStyleBackColor = true;
+         this.btnConsoleRun.Click += new System.EventHandler(this.btnConsoleRun_Click);
          // 
          // rtxtErrors
          // 
@@ -673,6 +701,11 @@
          // tabPage3
          // 
          this.tabPage3.BackColor = System.Drawing.Color.DimGray;
+         this.tabPage3.Controls.Add(this.Texture5);
+         this.tabPage3.Controls.Add(this.Texture4);
+         this.tabPage3.Controls.Add(this.Texture3);
+         this.tabPage3.Controls.Add(this.Texture2);
+         this.tabPage3.Controls.Add(this.Texture1);
          this.tabPage3.Controls.Add(this.rtxtTexture);
          this.tabPage3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -691,19 +724,6 @@
          this.tabPage4.Size = new System.Drawing.Size(296, 217);
          this.tabPage4.TabIndex = 3;
          this.tabPage4.Text = "3D";
-         // 
-         // btnExit
-         // 
-         this.btnExit.BackColor = System.Drawing.Color.Transparent;
-         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-         this.btnExit.Location = new System.Drawing.Point(1146, 6);
-         this.btnExit.Name = "btnExit";
-         this.btnExit.Size = new System.Drawing.Size(28, 28);
-         this.btnExit.TabIndex = 0;
-         this.btnExit.UseVisualStyleBackColor = false;
-         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
          // 
          // rtxtHistory
          // 
@@ -747,6 +767,7 @@
          this.btnRhombus.Size = new System.Drawing.Size(28, 28);
          this.btnRhombus.TabIndex = 0;
          this.btnRhombus.UseVisualStyleBackColor = false;
+         this.btnRhombus.Click += new System.EventHandler(this.btnRhombus_Click);
          this.btnRhombus.MouseLeave += new System.EventHandler(this.btnRhombus_MouseLeave);
          this.btnRhombus.MouseHover += new System.EventHandler(this.btnRhombus_MouseHover);
          // 
@@ -762,8 +783,67 @@
          this.btnPentagon.Size = new System.Drawing.Size(28, 28);
          this.btnPentagon.TabIndex = 0;
          this.btnPentagon.UseVisualStyleBackColor = false;
+         this.btnPentagon.Click += new System.EventHandler(this.btnPentagon_Click);
          this.btnPentagon.MouseLeave += new System.EventHandler(this.btnPentagon_MouseLeave);
          this.btnPentagon.MouseHover += new System.EventHandler(this.btnPentagon_MouseHover);
+         // 
+         // btnExit
+         // 
+         this.btnExit.BackColor = System.Drawing.Color.Transparent;
+         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+         this.btnExit.Location = new System.Drawing.Point(1146, 6);
+         this.btnExit.Name = "btnExit";
+         this.btnExit.Size = new System.Drawing.Size(28, 28);
+         this.btnExit.TabIndex = 0;
+         this.btnExit.UseVisualStyleBackColor = false;
+         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+         // 
+         // Texture1
+         // 
+         this.Texture1.Location = new System.Drawing.Point(16, 12);
+         this.Texture1.Name = "Texture1";
+         this.Texture1.Size = new System.Drawing.Size(50, 50);
+         this.Texture1.TabIndex = 2;
+         this.Texture1.TabStop = false;
+         this.Texture1.Click += new System.EventHandler(this.Texture1_Click);
+         // 
+         // Texture2
+         // 
+         this.Texture2.Location = new System.Drawing.Point(96, 12);
+         this.Texture2.Name = "Texture2";
+         this.Texture2.Size = new System.Drawing.Size(50, 50);
+         this.Texture2.TabIndex = 2;
+         this.Texture2.TabStop = false;
+         this.Texture2.Click += new System.EventHandler(this.Texture2_Click);
+         // 
+         // Texture3
+         // 
+         this.Texture3.Location = new System.Drawing.Point(166, 12);
+         this.Texture3.Name = "Texture3";
+         this.Texture3.Size = new System.Drawing.Size(50, 50);
+         this.Texture3.TabIndex = 2;
+         this.Texture3.TabStop = false;
+         this.Texture3.Click += new System.EventHandler(this.Texture3_Click);
+         // 
+         // Texture4
+         // 
+         this.Texture4.Location = new System.Drawing.Point(234, 12);
+         this.Texture4.Name = "Texture4";
+         this.Texture4.Size = new System.Drawing.Size(50, 50);
+         this.Texture4.TabIndex = 2;
+         this.Texture4.TabStop = false;
+         this.Texture4.Click += new System.EventHandler(this.Texture4_Click);
+         // 
+         // Texture5
+         // 
+         this.Texture5.Location = new System.Drawing.Point(16, 74);
+         this.Texture5.Name = "Texture5";
+         this.Texture5.Size = new System.Drawing.Size(50, 50);
+         this.Texture5.TabIndex = 2;
+         this.Texture5.TabStop = false;
+         this.Texture5.Click += new System.EventHandler(this.Texture5_Click);
          // 
          // Mainapp
          // 
@@ -783,6 +863,9 @@
          this.Name = "Mainapp";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Mainapp";
+         this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mainapp_MouseDown);
+         this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mainapp_MouseMove);
+         this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Mainapp_MouseUp);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          this.panel2.ResumeLayout(false);
@@ -806,6 +889,11 @@
          this.tabPage2.ResumeLayout(false);
          this.tabPage3.ResumeLayout(false);
          this.tabPage4.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.Texture1)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture2)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture3)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture4)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.Texture5)).EndInit();
          this.ResumeLayout(false);
 
       }
@@ -853,9 +941,9 @@
       private System.Windows.Forms.PictureBox showTexturebox;
       private System.Windows.Forms.PictureBox showColorbox;
       private System.Windows.Forms.PictureBox DrawAreaPanel;
-      private System.Windows.Forms.Button button2;
-      private System.Windows.Forms.Button button1;
-      private System.Windows.Forms.Button btnClear;
+      private System.Windows.Forms.Button btnConsoleRun;
+      private System.Windows.Forms.Button btnConsoleSave;
+      private System.Windows.Forms.Button btnConsoleClear;
       private System.Windows.Forms.TabControl tabControl1;
       private System.Windows.Forms.TabPage tabPage1;
       private System.Windows.Forms.RichTextBox rtxtErrors;
@@ -868,5 +956,10 @@
       private System.Windows.Forms.RichTextBox rtxt3D;
       private System.Windows.Forms.Button btnPentagon;
       private System.Windows.Forms.Button btnRhombus;
+      private System.Windows.Forms.PictureBox Texture5;
+      private System.Windows.Forms.PictureBox Texture4;
+      private System.Windows.Forms.PictureBox Texture3;
+      private System.Windows.Forms.PictureBox Texture2;
+      private System.Windows.Forms.PictureBox Texture1;
    }
 }
