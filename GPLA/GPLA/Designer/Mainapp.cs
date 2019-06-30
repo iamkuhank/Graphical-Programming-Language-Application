@@ -434,7 +434,6 @@ namespace GPLA
                _size3 = int.Parse(match1.Groups[4].Value);
                _size4 = int.Parse(match1.Groups[6].Value);
 
-
                ClassShapeFactory shapeFactory = new ClassShapeFactory();
                ClassShape c = shapeFactory.GetShape("line");
                c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4);
@@ -445,7 +444,6 @@ namespace GPLA
                rtxtErrors.AppendText(ex.Message + Environment.NewLine);
                //MessageBox.Show(ex.Message);
             }
-
          }
          //=============================== RECTANGLE with DrawTo ====================================================
          else if (match2.Success)

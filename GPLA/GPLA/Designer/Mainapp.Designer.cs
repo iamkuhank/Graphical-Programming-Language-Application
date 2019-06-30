@@ -87,9 +87,9 @@
          this.lbl_canvasy = new System.Windows.Forms.Label();
          this.label3 = new System.Windows.Forms.Label();
          this.label4 = new System.Windows.Forms.Label();
-         this.btnExit = new GPLA.Designer.CircularButton();
          this.btnText = new System.Windows.Forms.Button();
          this.btnTextsave = new System.Windows.Forms.Button();
+         this.btnExit = new GPLA.Designer.CircularButton();
          this.panel1.SuspendLayout();
          this.panel2.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.showTexturebox)).BeginInit();
@@ -139,9 +139,9 @@
          this.btnPentagon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
          this.btnPentagon.ForeColor = System.Drawing.Color.Gray;
          this.btnPentagon.Image = ((System.Drawing.Image)(resources.GetObject("btnPentagon.Image")));
-         this.btnPentagon.Location = new System.Drawing.Point(52, 139);
+         this.btnPentagon.Location = new System.Drawing.Point(52, 137);
          this.btnPentagon.Name = "btnPentagon";
-         this.btnPentagon.Size = new System.Drawing.Size(28, 28);
+         this.btnPentagon.Size = new System.Drawing.Size(30, 30);
          this.btnPentagon.TabIndex = 0;
          this.btnPentagon.UseVisualStyleBackColor = false;
          this.btnPentagon.Click += new System.EventHandler(this.btnPentagon_Click);
@@ -157,7 +157,7 @@
          this.btnRhombus.Image = ((System.Drawing.Image)(resources.GetObject("btnRhombus.Image")));
          this.btnRhombus.Location = new System.Drawing.Point(9, 139);
          this.btnRhombus.Name = "btnRhombus";
-         this.btnRhombus.Size = new System.Drawing.Size(28, 28);
+         this.btnRhombus.Size = new System.Drawing.Size(30, 30);
          this.btnRhombus.TabIndex = 0;
          this.btnRhombus.UseVisualStyleBackColor = false;
          this.btnRhombus.MouseLeave += new System.EventHandler(this.btnRhombus_MouseLeave);
@@ -170,9 +170,9 @@
          this.btnTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
          this.btnTriangle.ForeColor = System.Drawing.Color.Gray;
          this.btnTriangle.Image = ((System.Drawing.Image)(resources.GetObject("btnTriangle.Image")));
-         this.btnTriangle.Location = new System.Drawing.Point(53, 98);
+         this.btnTriangle.Location = new System.Drawing.Point(53, 97);
          this.btnTriangle.Name = "btnTriangle";
-         this.btnTriangle.Size = new System.Drawing.Size(28, 28);
+         this.btnTriangle.Size = new System.Drawing.Size(30, 30);
          this.btnTriangle.TabIndex = 0;
          this.btnTriangle.UseVisualStyleBackColor = false;
          this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
@@ -188,7 +188,7 @@
          this.btnRectangle.Image = ((System.Drawing.Image)(resources.GetObject("btnRectangle.Image")));
          this.btnRectangle.Location = new System.Drawing.Point(8, 98);
          this.btnRectangle.Name = "btnRectangle";
-         this.btnRectangle.Size = new System.Drawing.Size(28, 28);
+         this.btnRectangle.Size = new System.Drawing.Size(30, 30);
          this.btnRectangle.TabIndex = 0;
          this.btnRectangle.UseVisualStyleBackColor = false;
          this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
@@ -204,7 +204,7 @@
          this.btnSquare.Image = ((System.Drawing.Image)(resources.GetObject("btnSquare.Image")));
          this.btnSquare.Location = new System.Drawing.Point(53, 57);
          this.btnSquare.Name = "btnSquare";
-         this.btnSquare.Size = new System.Drawing.Size(28, 28);
+         this.btnSquare.Size = new System.Drawing.Size(30, 30);
          this.btnSquare.TabIndex = 0;
          this.btnSquare.UseVisualStyleBackColor = false;
          this.btnSquare.MouseLeave += new System.EventHandler(this.btnSquare_MouseLeave);
@@ -219,7 +219,7 @@
          this.btnCircle.Image = ((System.Drawing.Image)(resources.GetObject("btnCircle.Image")));
          this.btnCircle.Location = new System.Drawing.Point(8, 57);
          this.btnCircle.Name = "btnCircle";
-         this.btnCircle.Size = new System.Drawing.Size(28, 28);
+         this.btnCircle.Size = new System.Drawing.Size(30, 30);
          this.btnCircle.TabIndex = 0;
          this.btnCircle.UseVisualStyleBackColor = false;
          this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
@@ -814,19 +814,6 @@
          this.label4.TabIndex = 8;
          this.label4.Text = "Y:";
          // 
-         // btnExit
-         // 
-         this.btnExit.BackColor = System.Drawing.Color.Transparent;
-         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-         this.btnExit.Location = new System.Drawing.Point(1146, 6);
-         this.btnExit.Name = "btnExit";
-         this.btnExit.Size = new System.Drawing.Size(28, 28);
-         this.btnExit.TabIndex = 0;
-         this.btnExit.UseVisualStyleBackColor = false;
-         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-         // 
          // btnText
          // 
          this.btnText.BackColor = System.Drawing.Color.DarkOrange;
@@ -853,6 +840,19 @@
          this.btnTextsave.Text = "SAVE";
          this.btnTextsave.UseVisualStyleBackColor = false;
          this.btnTextsave.Click += new System.EventHandler(this.btnTextsave_Click);
+         // 
+         // btnExit
+         // 
+         this.btnExit.BackColor = System.Drawing.Color.Transparent;
+         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+         this.btnExit.Location = new System.Drawing.Point(1146, 6);
+         this.btnExit.Name = "btnExit";
+         this.btnExit.Size = new System.Drawing.Size(28, 28);
+         this.btnExit.TabIndex = 0;
+         this.btnExit.UseVisualStyleBackColor = false;
+         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
          // 
          // Mainapp
          // 
