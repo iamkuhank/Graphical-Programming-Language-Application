@@ -307,20 +307,20 @@ namespace GPLA
       private void Texture1_Click(object sender, EventArgs e)
       {
          texturestyle = 1;
-         bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
+         bb = new HatchBrush(HatchStyle.Cross, Color.Chocolate, Color.Cornsilk);
          showTexturebox.BackgroundImage = Texture1.BackgroundImage;
       }
 
       private void Texture2_Click(object sender, EventArgs e)
       {
-         bb = new HatchBrush(HatchStyle.DiagonalCross, Color.Red, Color.Yellow);
+         bb = new HatchBrush(HatchStyle.DiagonalCross, Color.Red, Color.Orange);
          texturestyle = 2;
          showTexturebox.BackgroundImage = Texture2.BackgroundImage;
       }
 
       private void Texture3_Click(object sender, EventArgs e)
       {
-         bb = new HatchBrush(HatchStyle.ForwardDiagonal, Color.Red, Color.Yellow);
+         bb = new HatchBrush(HatchStyle.ForwardDiagonal, Color.SkyBlue, Color.Yellow);
          texturestyle = 3;
          showTexturebox.BackgroundImage = Texture3.BackgroundImage;
       }
@@ -328,14 +328,14 @@ namespace GPLA
       private void Texture4_Click(object sender, EventArgs e)
       {
          texturestyle = 4;
-         bb = new HatchBrush(HatchStyle.Horizontal, Color.Red, Color.Yellow);
+         bb = new HatchBrush(HatchStyle.Horizontal, Color.Plum, Color.Lime);
          showTexturebox.BackgroundImage = Texture4.BackgroundImage;
       }
 
       private void Texture5_Click(object sender, EventArgs e)
       {
          texturestyle = 5;
-         bb = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.Yellow);
+         bb = new HatchBrush(HatchStyle.Vertical, Color.Black, Color.Yellow);
          showTexturebox.BackgroundImage = Texture5.BackgroundImage;
       }
 

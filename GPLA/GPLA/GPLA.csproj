@@ -99,7 +99,12 @@
     <Content Include="Designer\Images\NewFolderpng.png" />
     <Content Include="Designer\Images\OpenFolderpng.png" />
     <Content Include="Designer\Images\SaveFolderpng.png" />
-    <Content Include="Designer\Images\unavailabeTexturepng.png" />
+    <Content Include="Designer\Images\Texture1.png" />
+    <Content Include="Designer\Images\Texture2.png" />
+    <Content Include="Designer\Images\Texture3.png" />
+    <Content Include="Designer\Images\Texture4.png" />
+    <Content Include="Designer\Images\Texture5.png" />
+    <Content Include="Designer\Images\Texture5jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccessClassLibrary\AccessClassLibrary.csproj">
