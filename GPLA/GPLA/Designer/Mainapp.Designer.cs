@@ -68,13 +68,10 @@
          this.Texture2 = new System.Windows.Forms.PictureBox();
          this.Texture1 = new System.Windows.Forms.PictureBox();
          this.rtxtTexture = new System.Windows.Forms.RichTextBox();
-         this.tabPage4 = new System.Windows.Forms.TabPage();
-         this.rtxt3D = new System.Windows.Forms.RichTextBox();
          this.rtxtConsole = new System.Windows.Forms.RichTextBox();
          this.mainIcon = new System.Windows.Forms.PictureBox();
          this.labHeader = new System.Windows.Forms.Label();
          this.panel5 = new System.Windows.Forms.Panel();
-         this.btnExit = new GPLA.Designer.CircularButton();
          this.groupBox1 = new System.Windows.Forms.GroupBox();
          this.lbl_StartPosX = new System.Windows.Forms.Label();
          this.lbl_StartPosY = new System.Windows.Forms.Label();
@@ -90,6 +87,9 @@
          this.lbl_canvasy = new System.Windows.Forms.Label();
          this.label3 = new System.Windows.Forms.Label();
          this.label4 = new System.Windows.Forms.Label();
+         this.btnExit = new GPLA.Designer.CircularButton();
+         this.btnText = new System.Windows.Forms.Button();
+         this.btnTextsave = new System.Windows.Forms.Button();
          this.panel1.SuspendLayout();
          this.panel2.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.showTexturebox)).BeginInit();
@@ -106,7 +106,6 @@
          ((System.ComponentModel.ISupportInitialize)(this.Texture3)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.Texture2)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.Texture1)).BeginInit();
-         this.tabPage4.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.mainIcon)).BeginInit();
          this.panel5.SuspendLayout();
          this.groupBox1.SuspendLayout();
@@ -479,7 +478,6 @@
          this.tabControl1.Controls.Add(this.tabPage1);
          this.tabControl1.Controls.Add(this.tabPage2);
          this.tabControl1.Controls.Add(this.tabPage3);
-         this.tabControl1.Controls.Add(this.tabPage4);
          this.tabControl1.Location = new System.Drawing.Point(0, 306);
          this.tabControl1.Name = "tabControl1";
          this.tabControl1.SelectedIndex = 0;
@@ -606,27 +604,6 @@
          this.rtxtTexture.TabIndex = 1;
          this.rtxtTexture.Text = "";
          // 
-         // tabPage4
-         // 
-         this.tabPage4.BackColor = System.Drawing.Color.DimGray;
-         this.tabPage4.Controls.Add(this.rtxt3D);
-         this.tabPage4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.tabPage4.Location = new System.Drawing.Point(4, 22);
-         this.tabPage4.Name = "tabPage4";
-         this.tabPage4.Size = new System.Drawing.Size(296, 217);
-         this.tabPage4.TabIndex = 3;
-         this.tabPage4.Text = "3D";
-         // 
-         // rtxt3D
-         // 
-         this.rtxt3D.BackColor = System.Drawing.Color.DimGray;
-         this.rtxt3D.Dock = System.Windows.Forms.DockStyle.Fill;
-         this.rtxt3D.Location = new System.Drawing.Point(0, 0);
-         this.rtxt3D.Name = "rtxt3D";
-         this.rtxt3D.Size = new System.Drawing.Size(296, 217);
-         this.rtxt3D.TabIndex = 1;
-         this.rtxt3D.Text = "";
-         // 
          // rtxtConsole
          // 
          this.rtxtConsole.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -671,19 +648,6 @@
          this.panel5.Name = "panel5";
          this.panel5.Size = new System.Drawing.Size(1180, 41);
          this.panel5.TabIndex = 4;
-         // 
-         // btnExit
-         // 
-         this.btnExit.BackColor = System.Drawing.Color.Transparent;
-         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-         this.btnExit.Location = new System.Drawing.Point(1146, 6);
-         this.btnExit.Name = "btnExit";
-         this.btnExit.Size = new System.Drawing.Size(28, 28);
-         this.btnExit.TabIndex = 0;
-         this.btnExit.UseVisualStyleBackColor = false;
-         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
          // 
          // groupBox1
          // 
@@ -850,12 +814,54 @@
          this.label4.TabIndex = 8;
          this.label4.Text = "Y:";
          // 
+         // btnExit
+         // 
+         this.btnExit.BackColor = System.Drawing.Color.Transparent;
+         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+         this.btnExit.Location = new System.Drawing.Point(1146, 6);
+         this.btnExit.Name = "btnExit";
+         this.btnExit.Size = new System.Drawing.Size(28, 28);
+         this.btnExit.TabIndex = 0;
+         this.btnExit.UseVisualStyleBackColor = false;
+         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+         // 
+         // btnText
+         // 
+         this.btnText.BackColor = System.Drawing.Color.DarkOrange;
+         this.btnText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnText.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnText.ForeColor = System.Drawing.Color.Black;
+         this.btnText.Location = new System.Drawing.Point(423, 63);
+         this.btnText.Name = "btnText";
+         this.btnText.Size = new System.Drawing.Size(42, 23);
+         this.btnText.TabIndex = 16;
+         this.btnText.Text = "TEXT";
+         this.btnText.UseVisualStyleBackColor = false;
+         this.btnText.Click += new System.EventHandler(this.btnText_Click);
+         // 
+         // btnTextsave
+         // 
+         this.btnTextsave.BackColor = System.Drawing.Color.LightGreen;
+         this.btnTextsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnTextsave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnTextsave.Location = new System.Drawing.Point(471, 63);
+         this.btnTextsave.Name = "btnTextsave";
+         this.btnTextsave.Size = new System.Drawing.Size(44, 23);
+         this.btnTextsave.TabIndex = 18;
+         this.btnTextsave.Text = "SAVE";
+         this.btnTextsave.UseVisualStyleBackColor = false;
+         this.btnTextsave.Click += new System.EventHandler(this.btnTextsave_Click);
+         // 
          // Mainapp
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.Color.DimGray;
          this.ClientSize = new System.Drawing.Size(1181, 673);
+         this.Controls.Add(this.btnTextsave);
+         this.Controls.Add(this.btnText);
          this.Controls.Add(this.groupBox1);
          this.Controls.Add(this.panel5);
          this.Controls.Add(this.groupBox2);
@@ -889,7 +895,6 @@
          ((System.ComponentModel.ISupportInitialize)(this.Texture3)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.Texture2)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.Texture1)).EndInit();
-         this.tabPage4.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.mainIcon)).EndInit();
          this.panel5.ResumeLayout(false);
          this.panel5.PerformLayout();
@@ -955,10 +960,8 @@
       private System.Windows.Forms.TabPage tabPage2;
       private System.Windows.Forms.RichTextBox rtxtConsole;
       private System.Windows.Forms.TabPage tabPage3;
-      private System.Windows.Forms.TabPage tabPage4;
       private System.Windows.Forms.RichTextBox rtxtHistory;
       private System.Windows.Forms.RichTextBox rtxtTexture;
-      private System.Windows.Forms.RichTextBox rtxt3D;
       private System.Windows.Forms.Button btnPentagon;
       private System.Windows.Forms.Button btnRhombus;
       private System.Windows.Forms.PictureBox Texture5;
@@ -966,5 +969,7 @@
       private System.Windows.Forms.PictureBox Texture3;
       private System.Windows.Forms.PictureBox Texture2;
       private System.Windows.Forms.PictureBox Texture1;
+      private System.Windows.Forms.Button btnText;
+      private System.Windows.Forms.Button btnTextsave;
    }
 }

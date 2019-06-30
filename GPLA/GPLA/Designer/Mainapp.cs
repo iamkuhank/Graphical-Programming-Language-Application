@@ -869,6 +869,27 @@ namespace GPLA
             {
                //rtxt_errors.AppendText(ex.Message + Environment.NewLine);
             }
+         }  
+      }
+
+      private void btnText_Click(object sender, EventArgs e)
+      {
+         OpenFileDialog op = new OpenFileDialog();
+         if (op.ShowDialog() == DialogResult.OK)
+         {
+            rtxtConsole.LoadFile(op.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = op.FileName;
+         }
+      }
+
+      private void btnTextsave_Click(object sender, EventArgs e)
+      {
+         SaveFileDialog sv = new SaveFileDialog();
+         sv.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
+         if (sv.ShowDialog() == DialogResult.OK)
+         {
+            rtxtConsole.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = sv.FileName;
          }
       }
    }
